@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Give to the PS38 PTA</title>
+<meta name="description" content="Support PS 38 The Pacific School. Your donation to the PTA funds arts, chess, literacy, field trips and community events for every student.">
+<meta property="og:title" content="Give to the PS38 PTA">
+<meta property="og:description" content="Every gift helps fund arts, chess, literacy, field trips and community events for every PS38 student.">
+<meta property="og:image" content="https://donate.ps38pta.org/logo.png">
+<meta property="og:url" content="https://donate.ps38pta.org/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --ink: #141414;
+    --muted: #5b5b5b;
+    --line: #e6e1d8;
+    --accent: #1d5c96;       /* Pacific blue */
+    --accent-dark: #164a7a;
+    --accent-soft: #e8f0f8;
+    --warm: #f2b33d;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  h1, h2, h3 { font-family: Montserrat, Inter, sans-serif; line-height: 1.2; margin: 0; }
+  a { color: var(--accent); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  header { background: var(--ink); color: #fff; padding: 48px 0 56px; }
+  header .wrap { display: flex; gap: 28px; align-items: center; }
+  header img { width: 120px; height: 120px; flex: none; }
+  header .eyebrow { font: 600 13px/1 Montserrat, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--warm); margin-bottom: 12px; }
+  header h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 800; }
+  header p { margin: 14px 0 0; color: #d9d9d9; max-width: 560px; }
+  @media (max-width: 600px) {
+    header { padding: 36px 0 44px; }
+    header .wrap { flex-direction: column; align-items: flex-start; gap: 20px; }
+    header img { width: 88px; height: 88px; }
+  }
+
+  section { padding: 44px 0 8px; }
+  section > .wrap > h2 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .lede { color: var(--muted); margin: 0 0 22px; }
+
+  /* Give cards */
+  .give { margin-top: -28px; padding-top: 0; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px; box-shadow: 0 6px 24px rgba(20,20,20,.06);
+    display: flex; flex-direction: column;
+  }
+  .card h3 { font-size: 20px; font-weight: 700; }
+  .card p { color: var(--muted); margin: 8px 0 20px; font-size: 16px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none;
+    background: var(--accent); color: #fff; font: 700 17px/1 Montserrat, sans-serif;
+    padding: 17px 20px; border-radius: 10px; transition: background .15s;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--accent-dark); }
+  .btn:focus-visible, .tier:focus-visible { outline: 3px solid var(--warm); outline-offset: 2px; }
+  .card .btn { margin-top: auto; }
+  .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: auto; }
+  @media (max-width: 380px) { .tiers { grid-template-columns: repeat(2, 1fr); } }
+  .tier {
+    text-decoration: none; text-align: center; color: var(--accent);
+    border: 2px solid var(--accent); border-radius: 10px; padding: 12px 4px 10px;
+    font: 700 20px/1.1 Montserrat, sans-serif; transition: background .15s, color .15s;
+  }
+  .tier small { display: block; font: 500 12px/1.4 Inter, sans-serif; color: var(--muted); }
+  .tier:hover, .tier:focus-visible { background: var(--accent); color: #fff; }
+  .tier:hover small, .tier:focus-visible small { color: #dce8f4; }
+  .fine { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+  .pay-methods { font-size: 14px; color: var(--muted); text-align: center; margin: 16px 0 0; }
+
+  /* What it funds */
+  .goal { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 18px; }
+  .goal-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .goal-head strong { font: 800 28px/1 Montserrat, sans-serif; }
+  .goal-head span { color: var(--muted); font-size: 15px; }
+  .bar { display: flex; height: 16px; border-radius: 8px; overflow: hidden; gap: 2px; background: var(--line); }
+  .bar i { display: block; }
+  .legend { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 20px; margin: 16px 0 0; padding: 0; list-style: none; font-size: 15px; }
+  @media (max-width: 520px) { .legend { grid-template-columns: 1fr; } }
+  .legend li { display: flex; gap: 10px; align-items: baseline; }
+  .legend .sw { width: 11px; height: 11px; border-radius: 3px; flex: none; transform: translateY(1px); }
+  .legend b { font-weight: 600; }
+  .legend em { font-style: normal; color: var(--muted); display: block; font-size: 14px; }
+  .c1 { background: #1d5c96; } .c2 { background: #f2b33d; } .c3 { background: #6aa3d5; } .c4 { background: #9a948a; }
+
+  .areas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 620px) { .areas { grid-template-columns: 1fr; } }
+  .area { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .area h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .area ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .area li { margin: 3px 0; }
+
+  /* Other ways */
+  .ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 720px) { .ways { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 460px) { .ways { grid-template-columns: 1fr; } }
+  .way { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .way h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+  .way p { margin: 0; font-size: 15px; color: var(--muted); }
+  .contact {
+    margin-top: 18px; background: var(--accent-soft); border-radius: var(--radius); padding: 22px 24px;
+    display: flex; gap: 20px; justify-content: space-between; align-items: center; flex-wrap: wrap;
+  }
+  .contact p { margin: 0; }
+  .contact a.mail { font-weight: 600; word-break: break-all; }
+  .facts { margin: 16px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 15px; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; font-weight: 600; }
+  .copy { font: 600 12px/1 Inter, sans-serif; margin-left: 8px; padding: 4px 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; cursor: pointer; color: var(--accent); vertical-align: 1px; }
+
+  footer { margin-top: 48px; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer p { margin: 0 0 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="logo.png" alt="PS 38 The Pacific School, Brooklyn NY" width="120" height="120">
+    <div>
+      <div class="eyebrow">PS38 PTA</div>
+      <h1>Give to PS38</h1>
+      <p>Every PS38 family is already part of the PTA. Your gift pays for the arts, chess, literacy coaching, field trips and community events that make PS38 feel like PS38.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============================================================
+       STRIPE PAYMENT LINKS — update the four monthly hrefs below
+       once the $20 / $50 / $100 links exist in Stripe.
+       ============================================================ -->
+  <section class="give" id="give">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card">
+          <h3>Make a one-time gift</h3>
+          <p>Give whatever works for your family. Every dollar stays at PS38.</p>
+          <a class="btn" href="https://donate.stripe.com/fZu14n09P9T10mKau70RG0j">Donate any amount</a>
+        </div>
+        <div class="card">
+          <h3>Give monthly</h3>
+          <p>A small monthly gift helps us plan the whole year. You can change or cancel anytime.</p>
+          <div class="tiers">
+            <a class="tier" href="https://donate.stripe.com/cNiaEX8Glfdl3yW8lZ0RG0l">$10<small>/month</small></a>
+            <a class="tier" href="https://donate.stripe.com/fZufZh8Gl1mv8TgfOr0RG0m">$20<small>/month</small></a>
+            <a class="tier" href="https://donate.stripe.com/28E7sLaOt8OX2uSgSv0RG0n">$50<small>/month</small></a>
+            <a class="tier" href="https://donate.stripe.com/3cIdR94q58OXedAdGj0RG0o">$100<small>/month</small></a>
+          </div>
+        </div>
+      </div>
+      <p class="pay-methods">Secure checkout by Stripe. Pay with a card, Apple Pay, Google Pay or your bank account.</p>
+    </div>
+  </section>
+
+  <section id="impact">
+    <div class="wrap">
+      <h2>What your gift funds</h2>
+      <p class="lede">Here's how we plan to spend this year's budget.</p>
+
+      <div class="goal">
+        <div class="goal-head">
+          <strong>$160,000</strong>
+          <span>2026–27 fundraising goal</span>
+        </div>
+        <div class="bar" role="img" aria-label="Budget: 68% school support, 19% community engagement, 8% school events, 5% operations">
+          <i class="c1" style="width:68%"></i><i class="c2" style="width:19%"></i><i class="c3" style="width:8%"></i><i class="c4" style="width:5%"></i>
+        </div>
+        <ul class="legend">
+          <li><span class="sw c1"></span><div><b>68% School support</b><em>Arts residencies, chess, literacy coaching, staffing, afterschool scholarships, classroom and field trip support</em></div></li>
+          <li><span class="sw c2"></span><div><b>19% Community</b><em>Fall Fest, movie nights, family outings</em></div></li>
+          <li><span class="sw c3"></span><div><b>8% School events</b><em>Winter and Spring shows, talent show, Book Fair, graduation</em></div></li>
+          <li><span class="sw c4"></span><div><b>5% Operations</b><em>ParentSquare and the school website</em></div></li>
+        </ul>
+      </div>
+
+      <div class="areas">
+        <div class="area">
+          <h3>Academic enrichment</h3>
+          <ul>
+            <li>Arts residencies for every grade</li>
+            <li>Chess program</li>
+            <li>Library support and author visits</li>
+            <li>Literacy coaching for teachers</li>
+          </ul>
+        </div>
+        <div class="area">
+          <h3>School activities</h3>
+          <ul>
+            <li>Field trips and classroom support</li>
+            <li>Winter and Spring shows, talent show</li>
+            <li>Graduation celebrations</li>
+            <li>Murals on Nevins St. and in the schoolyard</li>
+          </ul>
+        </div>
+        <div class="area">
+          <h3>Community</h3>
+          <ul>
+            <li>Fall Fest and movie nights</li>
+            <li>Skating in Prospect Park</li>
+            <li>Liberty and Cyclones games</li>
+          </ul>
+        </div>
+        <div class="area">
+          <h3>Advocacy and care</h3>
+          <ul>
+            <li>Teacher and staff appreciation</li>
+            <li>Building improvements and public health support</li>
+            <li>Advocacy with the school, DOE and District 15</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="other-ways">
+    <div class="wrap">
+      <h2>Other ways to give</h2>
+      <p class="lede">These all work. Email our treasurer and they'll help you with the details.</p>
+      <div class="ways">
+        <div class="way"><h3>Check</h3><p>Make it payable to the Parent Teacher Association of PS 38.</p></div>
+        <div class="way"><h3>Bank transfer (ACH)</h3><p>For larger gifts, a direct transfer avoids card fees.</p></div>
+        <div class="way"><h3>Employer match</h3><p>Many employers match donations and can double your gift.</p></div>
+        <div class="way"><h3>Donor-advised fund</h3><p>Recommend a grant from your DAF using our details below.</p></div>
+        <div class="way"><h3>Stock</h3><p>Donating appreciated stock can be tax-efficient.</p></div>
+        <div class="way"><h3>Time and in-kind</h3><p>Volunteering and donated goods count too.</p></div>
+      </div>
+
+      <div class="contact">
+        <div>
+          <p>Questions, or ready to give another way?</p>
+          <p><a class="mail" href="mailto:38ptatreas@gmail.com?subject=Donating%20to%20the%20PS38%20PTA">38ptatreas@gmail.com</a></p>
+        </div>
+        <a class="btn" href="mailto:38ptatreas@gmail.com?subject=Donating%20to%20the%20PS38%20PTA">Email the treasurer</a>
+      </div>
+
+      <dl class="facts">
+        <dt>Legal name</dt><dd>Parent Teacher Association of PS 38</dd>
+        <dt>EIN</dt><dd><span id="ein">11-3596441</span><button class="copy" type="button" data-copy="11-3596441" hidden>Copy</button></dd>
+        <dt>Status</dt><dd>501(c)(3) nonprofit</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Donations to the Parent Teacher Association of PS 38 are tax-deductible to the extent allowed by law. No goods or services are provided in exchange for your gift. Stripe emails your receipt right after checkout.</p>
+    <p>To change or cancel a monthly gift, email <a href="mailto:38ptatreas@gmail.com">38ptatreas@gmail.com</a>.</p>
+    <p>PS 38 The Pacific School · 450 Pacific Street, Brooklyn, NY 11217</p>
+  </div>
+</footer>
+
+<script>
+  // Stripe can redirect here after checkout with ?thanks. Show a small banner if so.
+  if (/[?&]thanks\b/.test(location.search)) {
+    var t = document.createElement('div');
+    t.setAttribute('role', 'status');
+    t.style.cssText = 'background:#f2b33d;color:#141414;text-align:center;padding:14px 20px;font:600 16px/1.4 Montserrat,sans-serif';
+    t.textContent = 'Thank you for supporting PS38! Your receipt is on its way to your inbox.';
+    document.body.insertBefore(t, document.body.firstChild);
+  }
+  // Progressive enhancement: show "Copy" buttons only when the clipboard API exists.
+  if (navigator.clipboard) {
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(btn.dataset.copy).then(function () {
+          btn.textContent = 'Copied';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+        });
+      });
+    });
+  }
+</script>
+</body>
+</html>
